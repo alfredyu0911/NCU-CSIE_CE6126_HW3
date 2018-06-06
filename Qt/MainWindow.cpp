@@ -91,22 +91,22 @@ void MainWindow::allCompoentInit()
     m_lb_J = new QLabel(QString("J"));
     m_slider_J = new QSlider(Qt::Horizontal);
     m_slider_J->setRange(1, 15);
-    m_slider_J->setValue(1);
+    m_slider_J->setValue(5);
     m_lbValue_J = new QLabel(QString::number(m_slider_J->value()));
 
     m_lb_exp = new QLabel(QString("實驗次數"));
     m_slider_exp = new QSlider(Qt::Horizontal);
     m_slider_exp->setRange(10, 100);
-    m_slider_exp->setValue(10);
+    m_slider_exp->setValue(20);
     m_lbValue_exp = new QLabel(QString::number(m_slider_exp->value()));
 
-    m_btn_StartOnce = new QPushButton(QString("start 1"));
+    m_btn_StartOnce = new QPushButton(QString("單次啟動"));
     m_btn_StartOnce->setEnabled(false);
     m_progress_once = new QProgressBar();
     m_progress_once->setRange(0, m_slider_Generation->value());
     m_progress_once->setValue(0);
 
-    m_btn_StartMultiple = new QPushButton(QString("start N"));
+    m_btn_StartMultiple = new QPushButton(QString("多次實驗"));
     m_btn_StartMultiple->setEnabled(false);
     m_progress_multiple = new QProgressBar();
     m_progress_multiple->setRange(0, 4748364);
